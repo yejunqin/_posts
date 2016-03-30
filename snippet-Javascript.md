@@ -1,5 +1,10 @@
+---
+title: snippet-Javascript
+date: 2015-10-23 20:32:19
+tags:
+---
 ### window.onload
-```
+``` javascript
 function windowOnload (fn){
 	var oldload;
 	if(window.onload){
@@ -14,8 +19,9 @@ function windowOnload (fn){
 	}
 }
 ```
+<!--more-->
 ### 获取url参数
-```
+``` javascript
 $.getUrlParam = function(name) {
 	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
 	var r = window.location.search.substr(1).match(reg);
@@ -23,14 +29,14 @@ $.getUrlParam = function(name) {
 }
 ```
 ### 判断手机号
-```
+``` javascript
 function isMobile(str) {
 	var reg = /^(1)[0-9]{10}$/;
 	return reg.test(str);
 }
 ```
 ### 本地存储
-```
+``` javascript
 var storage = {
 	set: function(key, value) {					//保存数据至本地
 		if(typeof(localStorage)=="undefined") {	
@@ -61,13 +67,13 @@ var storage = {
 };
 ```
 ### 判断数组
-```
+``` javascript
 var isArray = function(value){
 	return Object.prototype.toString.apply(value) === '[object Array]';
 }
 ```
 ### 事件监听器
-```
+``` javascript
 var myevent = {
 	//页面加载完成执行
 	readyEvent : function(fn){

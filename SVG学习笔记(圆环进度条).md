@@ -1,3 +1,8 @@
+---
+title: SVG学习笔记
+date: 2015-10-19 14:22:33
+tags:
+---
 ### SVG
 可缩放矢量图形(Scalable Vector Graphics，SVG)是一种用来描述二维矢量图形的XML标记语言。
 ### 为什么选择SVG来描绘图形？
@@ -8,6 +13,7 @@
  - SVG 图像中的文本是可选的，同时也是可复制的；
  - SVG 图像可以与DOM，CSS和JavaScript交互；
  - SVG 可以制作成整体或局部动画。
+<!--more-->
  
 ### 浏览器兼容性
  |功能|Chrome|Firefox(Gecko)|Internet Explorer|Opera|Safari|
@@ -20,7 +26,7 @@
 假如要制作这样一个
 ![enter image description here](http://7xnjm0.com1.z0.glb.clouddn.com/circle.jpg)
 SVG代码如下:
-```
+``` javascript
 <svg width="440" height="440">
     <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#D1D3D7" fill="none"></circle>
     <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#00A5E0" fill="none" stroke-dasharray="200 1069"></circle>
@@ -46,7 +52,7 @@ SVG内的元素能定义属性, 用来描述形状.
 利用`transform`可以对图形进行图像**变换, 旋转, 缩放, 移动**, 和**倾斜**. 关于更多`transform`属性的了解, 可参考这篇文章[理解SVG坐标系统和变换: transform属性](http://www.w3cplus.com/html5/svg-transformations.html).
 
 ok, 加上`transform`属性,大功告成,代码如下:
-```
+``` javascript
 <svg width="440" height="440">
     <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#D1D3D7" fill="none"></circle>
     <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#00A5E0" fill="none" transform="rotate(-90 220 220)" stroke-dasharray="200 1069"></circle>
@@ -58,7 +64,7 @@ ok, 加上`transform`属性,大功告成,代码如下:
 
 ### [再做一个]用SVG做一个直线进度图
 有了前一个例子的经验,换成直线也很简单. 代码如下:
-```
+``` javascript
 <svg width="440" height="200" style="margin-left:100px;">
     <line x1="0" y1="0" x2="440" y2="0" stroke-width="50" stroke="#d1d3d7" fill="none"></line>
     <line x1="0" y1="0" x2="440" y2="0" stroke-width="50" stroke="#00a5e0" fill="none" stroke-dasharray="0 440">
