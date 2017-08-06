@@ -17,6 +17,7 @@ tag:
 #### `html`代码
 一个Vue文件形式的组件由3个标签组成，`Template`标签里包含该组件的html代码，`style`标签包含该组件的样式，`script`包含该组件的`javascript`代码。
 html代码：
+
 ```
 <template>
 	<div class="v-toast" v-show="show" transition="v-toast">
@@ -80,3 +81,4 @@ html代码：
 ```
 this.$broadcast('toast', {type: 'ok', word: '添加成功'})
 ```
+

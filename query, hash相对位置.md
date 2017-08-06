@@ -20,7 +20,8 @@ function genUrlWithSearch(url: string = "", params: {[name: string]: string | nu
 	return !!searchString ? `${url}${startChat}${searchString}` : url;
 }
 ```
-好像并没有什么问题，然而确实是有问题的。如果传入url有`hash`，那结果会是`https://ezbuy.co.th/#anchor?ezspm=1.10000000.2.3.4`。
+好像并没有什么问题，然而确实是有问题的，因为没有考虑到`hash`的情况。
+如果传入url有`hash`，那结果会是`https://ezbuy.co.th/#anchor?ezspm=1.10000000.2.3.4`。
 `window.location.hash`的结果是`#anchor?ezspm=1.10000000.2.3.4`，很明显这会影响页面锚点的定位。而且`window.location.search`输出结果是空字符串`""`。
 
 
