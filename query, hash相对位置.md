@@ -8,7 +8,7 @@ spm项目需要对页面所有url加上spm字段，如原本的url是`https://ez
 这里使用了一个生成query-string的方法：
 
 ```ts
-export function genUrlWithSearch(url: string = "", params: {[name: string]: string | number | undefined}): string {
+function genUrlWithSearch(url: string = "", params: {[name: string]: string | number | undefined}): string {
 	if (url === undefined || url === "") {
 		return "";
 	}
